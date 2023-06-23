@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+nav {
+  height: 4.625rem;
+  background-image: url(./images/image_geometry_1.png);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: none;
+}
+
+nav .menu {
+  margin-top: 1.188rem;
+  margin-right: 0.875rem;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/popup-corner.png), url(./images/popup-decoration-1.png), url(./images/popup-decoration-2.png), url(./images/popup-decoration-2.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top left, bottom center, top 74px right 57px, bottom max(110px, 25%) left 54px; /* stylelint-disable-line */
+  background-size: 111px 74px, contain, 40px 40px, 40px 40px;
+}
+
+#contact-form {
+  background-color: #f9f9fa;
+  background-image: url(./images/image_geometry_3.png);
+  background-repeat: no-repeat;
+  padding: 6.625rem 0.875rem 1.94rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form h2 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  line-height: 3.125rem;
+  margin-bottom: 1.25rem;
+}
+
+#contact-form > p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.875rem;
+}
+
+#contact-form label {
+  font-weight: 400;
+  font-size: 0.625rem;
+  color: #7d7c84;
+}
+
+#contact-form input,
+#contact-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+#contact-form input {
+  margin-bottom: 0;
+  height: 3.25rem;
+  padding: 1.44rem 1rem 0.31rem 1rem;
+}
+
+#contact-form textarea {
+  height: 7rem;
+  padding: 0.875rem 1rem;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #7d7c84;
+  font-size: 0.875rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #1a2236;
+  outline: none;
+}
+
+#contact-form button {
+  width: 100%;
+  height: 2.75rem;
+  border: none;
+  background-color: #1a2236;
+  margin-top: 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: #1a2236;
+  padding: 1.75rem 0.875rem 2.25rem 1.125rem;
+}
+
+#footer button {
+  border: none;
+  background-color: transparent;
+  background-image: url(./images/ic_link_teal.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 1.5rem;
+  color: #92dcdc;
+  display: block;
+  width: 10.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+#footer button:hover {
+  cursor: pointer;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+#contact-form button:hover,
+button.collaboration:hover,
+a.see-project:hover,
+#about-myself-section button:hover {
+  cursor: pointer;
+  border: 1px solid #1a2236;
+  background-color: white;
+  color: #1a2236;
+}
+
+#contact-form button:active,
+button.collaboration:active,
+a.see-project:active,
+#about-myself-section button:active {
+  border: 2px solid #1a2236;
+  background-color: white;
+  color: #1a2236;
+}
+
+#footer ul {
+  margin-top: 1.56rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#footer a {
+  display: flex;
+}
+
+#footer ul li + li {
+  margin-left: 1.81rem;
+}
+
+#footer.unvisible,
+#about-myself-section.unvisible,
+#contact-form.unvisible,
+#work-section.unvisible,
+#headline.unvisible,
+header.unvisible {
+  display: none;
+}
