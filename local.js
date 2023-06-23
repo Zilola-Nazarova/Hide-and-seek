@@ -27,9 +27,9 @@ function storageAvailable(type) {
 
 if (storageAvailable("localStorage")) {
   let formData = {};
-  var userName = document.getElementById('user-name');
-  var email = document.getElementById('user-email');
-  var message = document.getElementById('user-message');
+  var userName = document.getElementById('user_name');
+  var email = document.getElementById('user_email');
+  var message = document.getElementById('user_message');
 
   if (!localStorage.getItem("userData")) {
     populateStorage();
@@ -41,19 +41,19 @@ if (storageAvailable("localStorage")) {
     formData.name = document.getElementById('user-name').value;
     formData.email = document.getElementById('user-email').value;
     formData.message = document.getElementById('user-message').value;
-    localStorage.setItem("userData", JSON.stringify(formData));
+    localStorage.setItem("userData", JSON.stringfy(formData));
     // setValues();
   }
 
   function setValues() {
-    document.getElementById('user-name').value = JSON.parse(localStorage.getItem('userData')).name;
+    document.getElementById('user-name').value = JSON.parse(localStorage.getItem('userData'));
     document.getElementById('user-email').value = JSON.parse(localStorage.getItem('userData')).email;
     document.getElementById('user-message').value = JSON.parse(localStorage.getItem('userData')).message;
   } 
 
-  userName.onkeyup = populateStorage;
-  email.onkeyup = populateStorage;
-  message.onkeyup = populateStorage;
+  userName.onkeypress = populateStorage;
+  email.onkeypress = populateStorage;
+  message.onkeypress = populateStorage;
 
 } else {
 }
